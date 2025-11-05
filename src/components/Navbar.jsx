@@ -15,13 +15,13 @@ export const Navbar = () => {
     }, [])
 
     const navLinks = [
-        { name: "Project Pitch", path: "/project-pitch" },
-        { name: "Show and Tell 1", path: "/show-and-tell-1" }
+      { name: "Project Pitch", path: "#project-pitch" },
+      { name: "Show and Tell 1", path: "#show-and-tell-1" }
     ]
 
-      return (
-    <nav className="bg-white px-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 lg:px-8">
+    return (
+    <nav className="bg-white">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 py-3">
         
         {/* project title */}
         <p className="font-semibold text-lg">Recipe Finder</p>

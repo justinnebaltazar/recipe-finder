@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { ProjectPitch } from './components/ProjectPitch'
 import { Router } from 'react-router-dom'
+import { ShowAndTell } from './components/ShowAndTell'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Navbar/>
       <Hero/>
       <ProjectPitch/>
+      <ShowAndTell/>
     </>
   )
 }
