@@ -4,6 +4,7 @@ import { Hero } from './components/Hero'
 import { ProjectPitch } from './components/ProjectPitch'
 import { Router } from 'react-router-dom'
 import { ShowAndTell } from './components/ShowAndTell'
+import { ShowAndTell2 } from './components/ShowAndTell2'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Hero/>
       <ProjectPitch/>
       <ShowAndTell/>
+      <ShowAndTell2/>
     </>
   )
 }

@@ -16,7 +16,8 @@ export const Navbar = () => {
 
     const navLinks = [
       { name: "Project Pitch", path: "#project-pitch" },
-      { name: "Show and Tell 1", path: "#show-and-tell-1" }
+      { name: "Show and Tell 1", path: "#show-and-tell-1" }, 
+      { name: "Show and Tell 2", path: "#show-and-tell-2"}
     ]
 
     return (
