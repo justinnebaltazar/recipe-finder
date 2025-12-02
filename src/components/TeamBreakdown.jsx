@@ -2,42 +2,47 @@ export const TeamBreakdown = () => {
   const team = [
     {
       name: "Justinne",
-      role: null,
+      role: "UI & Developer",
       contributions: [
         "UI Mockups",
         "Fragments & Layouts",
-        "Threaded Design Diagram"
+        "Threaded Design Diagram", 
+        "Virtual Fridge Room Database",
+        "Website Implementation + Management"
       ],
     },
     {
       name: "Mark",
-      role: null,
+      role: "Backend Developer",
       contributions: [
-        "API setup",
         "Database schema",
-        "Data handling",
-      ],
-    },
-    {
-      name: "Kevin",
-      role: null,
-      contributions: [
         "MVVM Diagram",
-        "Show and Tell 1",
+        "FastAPI + Gemini API Integration",
+        "Recipe Generation (Image + Text)",
       ],
     },
     {
       name: "Brian",
-      role: null,
+      role: "Developer",
       contributions: [
-        "MVVM design",
-        "Component structure",
         "Show and Tell 2 Video",
+        "Final Presentation Video",
+        "Firestore Setup + Authentication",
+        "Explore Page - Shared Recipes",
+        "Login + Sign Up Fragments"
+      ],
+    },
+        {
+      name: "Kevin",
+      role: "Architecture",
+      contributions: [
+        "MVVM Diagram",
+        "Show and Tell 1 Video",
       ],
     },
     {
       name: "Yan Ting",
-      role: null,
+      role: "Developer",
       contributions: [
         "Recipe Repository",
         "Recipe ViewModel"
@@ -46,42 +51,54 @@ export const TeamBreakdown = () => {
   ];
 
   return (
-    <div className="w-full py-12 sm:py-16 md:py-24 bg-[#06402B]">
+    <div className="w-full py-12 sm:py-16 md:py-24 bg-[#d9e7d3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
-          Team Effort Breakdown
-        </h1>
-        <p className="text-white text-base sm:text-lg md:text-xl mb-10 max-w-3xl">
-          A breakdown of each team member’s contributions to the Recipe Finder project.
-        </p>
-
-        {/* grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 justify-items-center">
-            {team.map((member, index) => (
-                <div
-                key={index}
-                className="w-full max-w-sm bg-[#d9e7d3] rounded-xl p-6 shadow hover:shadow-md transition"
-                >
-                <h2 className="text-lg sm:text-xl font-bold text-gray-900">
-                    {member.name}
-                </h2>
-                {member.role && 
-                <p className="text-sm font-semibold text-[#06402B] mb-4">
-                    {member.role}
-                </p>}
-
-                <ul className="list-disc list-inside text-gray-800 space-y-1">
-                    {member.contributions.map((item, i) => (
-                    <li key={i}>{item}</li>
-                    ))}
-                </ul>
-                </div>
-            ))}
+        <div className="text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#06402B]] mb-4">
+            Team Effort Breakdown
+          </h1>
+          <p className="text-[#06402B]] text-lg sm:text-xl max-w-2xl mx-auto">
+            A collaborative effort bringing the Recipe Finder project to life
+          </p>
         </div>
 
+        {/* Team Cards */}
+        <div className="flex flex-wrap gap-8 justify-center">
+          {team.map((member, index) => (
+            <div
+              key={index}
+              className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-sm bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              {/* header with gradient */}
+              <div className="bg-linear-to-br from-[#06402B] to-[#0a5a3d] p-6 text-white">
+                <h2 className="text-2xl font-bold mb-1">
+                  {member.name}
+                </h2>
+                <p className="text-sm text-white/80 font-medium">
+                  {member.role}
+                </p>
+              </div>
+
+              {/* contributions */}
+              <div className="p-6 bg-[#f8faf7] grow">
+                <h3 className="text-sm font-semibold text-gray-600 uppercase tracking-wide mb-3">
+                  Contributions
+                </h3>
+                <div className="space-y-2">
+                  {member.contributions.map((item, i) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#06402B] mt-2 shrink-0"></span>
+                      <span className="text-gray-800 leading-relaxed">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
 
       </div>
     </div>
   );
 };
+

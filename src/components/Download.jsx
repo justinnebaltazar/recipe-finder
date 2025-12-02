@@ -14,7 +14,6 @@ export const Download = () => {
           recipe recommendations, and AI-powered recipe generation.
         </p>
 
-        {/* TO DO: UPDATE APK LINK */}
         <a
           href="/recipe-finder/RecipeFinder.apk"
           target="_blank"

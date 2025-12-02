@@ -14,7 +14,7 @@ export const ShowAndTell = () => {
         {/* buttons / links */}
         <ul className="flex flex-wrap gap-4 mb-10">
           <li>
-            <a href="/recipe-finder/RecipeFinder.apk" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-white shadow hover:shadow-md transition">
+            <a href="/recipe-finder/RecipeFinder_ST1.apk" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-white shadow hover:shadow-md transition">
               Project APK
             </a>
           </li>

@@ -2,16 +2,17 @@ import './App.css'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { ProjectPitch } from './components/ProjectPitch'
-import { BrowserRouter, Routes, Route} from 'react-router-dom'
+import { HashRouter, Routes, Route} from 'react-router-dom'
 import { ShowAndTell } from './components/ShowAndTell'
 import { ShowAndTell2 } from './components/ShowAndTell2'
 import { Carousel } from './components/Carousel'
 import { TeamBreakdown } from './components/TeamBreakdown'
 import { Download } from './components/Download'
+import { FinalPresentation } from './components/FinalPresentation'
 
 function App() {
   return (
-    <BrowserRouter basename="/recipe-finder">
+    <HashRouter>
       <Routes>
         {/* home page */}
         <Route
@@ -22,6 +23,7 @@ function App() {
               <Hero/>
               <ProjectPitch/>
               <Download/>
+              <FinalPresentation/>
               <TeamBreakdown/>
               <div className="my-8 sm:my-16 md:my-20">
                 <Carousel />
@@ -45,7 +47,7 @@ function App() {
         />
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
